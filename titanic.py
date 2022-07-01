@@ -80,7 +80,7 @@ mnb=MultinomialNB()
 bn=BernoulliNB()
 
 #TRAINING AND TESTING
-x_train, x_test, y_train, y_test=train_test_split(x, y, random_state=0, train_size=0.2)
+x_train, x_test, y_train, y_test=train_test_split(x, y, random_state=0, test_size=0.2)
 dt.fit(x_train,y_train)
 y_pred=dt.predict(x_test)
 print('DecisionTreeClassifier:',accuracy_score(y_test,y_pred))
